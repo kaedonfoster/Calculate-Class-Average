@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--Stuff that Does not show up on screen-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculate Class Average</title>
+</head>
+<body>
+<!--boxes for each Class-->
+<h2>Calulate Your Class Average</h2>
+A Block <input id="Ablock" type="number" placeholder="Enter Your A block Mark"> %<br>
+B Block <input id="Bblock" type="number" placeholder="Enter Your B block Mark"> %<br>
+C Block <input id="Cblock" type="number" placeholder="Enter Your C block Mark"> %<br>
+D Block <input id="Dblock" type="number" placeholder="Enter Your D block Mark"> %<br>
+<br>
+<!--button to calculate Average-->
+<button type="button" onclick="getAvg()">Calculate Average</button>
+<script>
+function getAvg() {
+ var classA = Number(document.getElementById('Ablock').value);
+ var classB = Number(document.getElementById('Bblock').value);
+ var classC = Number(document.getElementById('Cblock').value);
+ var classD = Number(document.getElementById('Dblock').value);
+var avg=(classA+classB+classC+classD)/4 ;
+
+//used to find the Letter Grade
+if (avg >=86) {
+  lGrade = "A";
+} else if (avg>=73) {
+  lGrade = "B";
+}  else if (avg >=67) {
+  lGrade = "C+";
+} else if (avg >=60) {
+  lGrade = "C";
+} else if (avg >=50) {
+  lGrade = "D";
+}else {
+  lGrade = "F";
+}
+//displays the class average and Letter grade
+document.getElementById("parAvg").innerHTML = "Your Class average is " + avg + "% and " + "Your Letter Grade is an " + lGrade + ".";
+}
+</script>
+<!--The paragraph everything is put into-->
+ <p id="parAvg"></p>
+</body>
+</html
