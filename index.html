@@ -53,6 +53,7 @@ function limit(input) {
     if (input.value > 100) input.value = 100;
   }
 
+
   //makes the clear button clear everything
   function getClear() {
 document.getElementById('Ablock').value = '';
@@ -69,7 +70,6 @@ function getAvg() {
  var classD = Number(document.getElementById('Dblock').value);
 var avg=(classA+classB+classC+classD)/4 ;
 
-
 //Finds the letter grade
 if (avg >=95) {
   lGrade = "A+";
@@ -82,7 +82,7 @@ if (avg >=95) {
 } else if (avg >=60) {
   lGrade = "C";
 } else if (avg >=50){
-    lgrade ="D";
+  lGrade ="D";
 } else {
   lGrade = "F";
 }
