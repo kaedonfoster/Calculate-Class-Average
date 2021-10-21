@@ -20,34 +20,18 @@ D Block <input id="Dblock" type="number" onchange="limit(this)" placeholder="Ent
 <button type="button" onclick="getClear()">Clear</button>
 <script>
   //makes it so you can only have % from 0-100
-  document.getElementById("Ablock").onkeyup = function() {
-  var input = parseInt(this.value);
-  if (input < 0 || input > 100){
-    alert("Value must be between 0 - 100");
-  }
+  function maxMin() {
+    var input = (this.value);
+
+    if (input < 0 || input > 100){
+      alert("Value should be between 0 - 100");
+    }
   return;
 }
-document.getElementById("Bblock").onkeyup = function() {
-  var input = parseInt(this.value);
-  if (input < 0 || input > 100){
-    alert("Value should be between 0 - 100");
-  }
-  return;
-}
-document.getElementById("Cblock").onkeyup = function() {
-  var input = parseInt(this.value);
-  if (input < 0 || input > 100){
-    alert("Value must be between 0 - 100");
-  }
-  return;
-}
-document.getElementById("Dblock").onkeyup = function() {
-  var input = parseInt(this.value);
-  if (input < 0 || input > 100){
-    alert("Value must be between 0 - 100");
-  }
-  return;
-}
+document.getElementById("Ablock").onkeyup = maxMin;
+document.getElementById("Bblock").onkeyup = maxMin;
+document.getElementById("Cblock").onkeyup = maxMin;
+document.getElementById("Dblock").onkeyup = maxMin;
 function limit(input) {
     if (input.value < 0) input.value = 0;
     if (input.value > 100) input.value = 100;
